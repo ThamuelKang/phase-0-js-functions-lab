@@ -3,10 +3,10 @@ function calculateTax(amount) {
 }
 
 function convertToUpperCase(text) {
-    return text.convertToUpperCase();
+    return text.toUpperCase();
 }
 
-function findMaximum(num1,num2) {
+function findMaximum(num1, num2) {
     if (num1 > num2) {
         return num1
     } else {
@@ -20,10 +20,11 @@ function isPalindrome(word) {
 }
 
 function calculateDiscountedPrice(originalPrice, discountPercentage) {
-    const convertPercentage = discountPercentage * .01
-
-    return originalPrice * convertPercentage
+    const discountAmount = originalPrice * (discountPercentage * .01)
+    return originalPrice - discountAmount
 }
+
+console.log(calculateDiscountedPrice(100, 100))
 
 
 // This is required for the test to function properly  
